@@ -1,0 +1,40 @@
+{
+    "$id": "https://example.com/product.schema.json",
+    "title": "Pass",
+    "description": "An e-pass in electronic pass system",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for the pass",
+            "type": "integer",
+            "minimum": 1
+        },
+        "status": {
+            "description": "Status of the pass (e.g., active, inactive, blocked)",
+            "type": "string",
+            "enum": ["активен", "неактивен", "заблокирован"]
+        },
+        "access_level": {
+            "description": "Level of user's access",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+        },
+        "full_name": {
+            "description": "Full name of the user",
+            "type": "string",
+            "pattern": "^[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ ?(([А-ЯЁ][а-яё]*) ?)*$"
+        },
+        "creation_date": {
+            "description": "The creation date of the pass",
+            "type": "string",
+            "format": "date-time"
+        },
+        "expiration_date": {
+            "description": "The expiration date of the pass",
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": ["id", "access_level", "status", "full_name", "creation_date", "expiration_date"]
+}  

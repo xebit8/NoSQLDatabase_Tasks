@@ -1,0 +1,7 @@
+ID -> int
+priority_level -> int
+status -> string
+full_name -> string
+creation_date -> string/datetime[ISO 8601]
+expiration_date -> string/datetime[ISO 8601]
+

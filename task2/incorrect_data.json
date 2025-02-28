@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "access_level": -1,
+        "status": "активно",
+        "full_name": "Денчик",
+        "creation_date": "28-02-2025",
+        "expiration_date": "Потом"
+    },
+    {
+        "id": "2",
+        "access_level": 99,
+        "status": "в отпуске",
+        "full_name": "Саня",
+        "creation_date": "28-02-2025",
+        "expiration_date": "Завтра"
+    },
+    {
+       "id": "3",
+        "access_level": 0,
+        "status": "заблочен",
+        "full_name": "Володянский",
+        "creation_date": "28-02-2025",
+        "expiration_date": 0 
+    }
+]

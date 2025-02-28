@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "access_level": 5,
+        "status": "активен",
+        "full_name": "Кременецкий Денис Алексеевич",
+        "creation_date": "2025-02-28T13:09:13Z",
+        "expiration_date": "2029-02-28T13:09:13Z"
+    },
+    {
+        "id": 2,
+        "access_level": 9,
+        "status": "неактивен",
+        "full_name": "Копытов Александр Николаевич",
+        "creation_date": "2025-02-16T00:00:00Z",
+        "expiration_date": "2029-02-16T00:00:00Z"
+    },
+    {
+       "id": 3,
+        "access_level": 2,
+        "status": "заблокирован",
+        "full_name": "Высоцкий Владимир Владимирович",
+        "creation_date": "2023-05-14T00:00:00Z",
+        "expiration_date": "2027-05-14T00:00:00Z" 
+    }
+]
