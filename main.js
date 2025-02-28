@@ -44,7 +44,7 @@ const data = [];
                 description: fakerRU.lorem.paragraph(),
                 pages: fakerRU.number.int({min: 1, max: 20}),
                 category: fakerRU.lorem.word(),
-                publication_data: fakerRU.date.recent({days: days_past_publication}).toLocaleDateString(),
+                publication_date: fakerRU.date.recent({days: days_past_publication}).toLocaleDateString(),
                 comments: comments
             })
         }
@@ -106,7 +106,7 @@ async function convertToDSV(imported_data, delimiter = '\t') {
     try {
         let headers = [
             "user_id", "full_name", "email", "registration_date", "last_authorization_date", "status", "birth_date", "gender",
-            "publication_title", "publication_description", "publication_pages", "publication_category", "publication_date",
+            "publication_title", "publication_description", "publication_pages", "publication_category", "publication_date", "publications_number",
             "comment_user_id", "comment_text"
         ];
 
@@ -120,7 +120,7 @@ async function convertToDSV(imported_data, delimiter = '\t') {
                 if (publication.comments.length === 0) {
                     let row = [
                         user.user_id, user.full_name, user.email.join(", "), user.registration_date, user.last_authorization_date, user.status, user.birth_date, user.gender,
-                        publication.title, publication.description, publication.pages, publication.category, publication.publication_data,
+                        publication.title, publication.description, publication.pages, publication.category, publication.publication_date, user.publications_number,
                         "", ""
                     ];
                     rows.push(row.join(delimiter));
@@ -129,7 +129,7 @@ async function convertToDSV(imported_data, delimiter = '\t') {
                     for (let comment of publication.comments) {
                         let row = [
                             user.user_id, user.full_name, user.email.join(", "), user.registration_date, user.last_authorization_date, user.status, user.birth_date, user.gender,
-                            publication.title, publication.description, publication.pages, publication.category, publication.publication_data,
+                            publication.title, publication.description, publication.pages, publication.category, publication.publication_date, user.publications_number,
                             comment.user_id, comment.comment_text
                         ];
                         rows.push(row.join(delimiter));
